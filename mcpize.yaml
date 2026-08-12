@@ -1,0 +1,13 @@
+version: 1
+name: github-actions-audit-mcp
+description: Audits GitHub Actions workflow YAML for script injection via untrusted event-context expressions interpolated into shell steps, third-party actions pinned to a mutable tag/branch instead of a commit SHA, missing permissions blocks, and pull_request_target combined with checking out the PR's own head commit.
+runtime: typescript
+entry: server.js
+build:
+  install: npm install
+startCommand:
+  type: http
+  command: node server.js
+  port: 8080
+  healthCheck: /health
+  mcpPath: /mcp

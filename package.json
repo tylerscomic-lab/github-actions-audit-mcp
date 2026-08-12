@@ -1,0 +1,12 @@
+{
+  "name": "github-actions-audit-mcp",
+  "version": "1.0.0",
+  "description": "Audits GitHub Actions workflow YAML for script injection via untrusted expressions, unpinned third-party actions, missing permissions blocks, and dangerous pull_request_target + head-checkout combinations",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  }
+}
